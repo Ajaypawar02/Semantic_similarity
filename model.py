@@ -83,3 +83,9 @@ class WeightedLayerPooling(nn.Module):
         weight_factor = self.layer_weights.unsqueeze(-1).unsqueeze(-1).unsqueeze(-1).expand(all_layer_embedding.size())
         weighted_average = (weight_factor*all_layer_embedding).sum(dim=0) / self.layer_weights.sum()
         return weighted_average
+    
+    
+    
+    
+    
+    
